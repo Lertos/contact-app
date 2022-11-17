@@ -12,4 +12,35 @@ public class Contact {
         this.homeNumber = homeNumber;
     }
 
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public PhoneNumber getCellNumber() {
+        return cellNumber;
+    }
+
+    public void setCellNumber(PhoneNumber cellNumber) {
+        this.cellNumber = cellNumber;
+    }
+
+    public PhoneNumber getHomeNumber() {
+        return homeNumber;
+    }
+
+    public void setHomeNumber(PhoneNumber homeNumber) {
+        this.homeNumber = homeNumber;
+    }
 }
