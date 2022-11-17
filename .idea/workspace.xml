@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="3bee9145-3d5d-4ca9-a7bf-c774dd3bfa4d" name="Changes" comment="Removing email for the sake of brevity">
-      <change beforePath="$PROJECT_DIR$/src/ContactList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ContactList.java" afterDir="false" />
+    <list default="true" id="3bee9145-3d5d-4ca9-a7bf-c774dd3bfa4d" name="Changes" comment="Adding methods to edit numbers for a contact">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -92,7 +93,42 @@
       <option name="project" value="LOCAL" />
       <updated>1668718131728</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Creating the method to add a new contact">
+      <created>1668718373996</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1668718373996</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Changing how indexing will work for the contact list">
+      <created>1668724172675</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1668724172675</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Fixing incorrect validation">
+      <created>1668724312173</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1668724312173</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Adding another check for a negative index. Adding updateContactName">
+      <created>1668724499068</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1668724499068</updated>
+    </task>
+    <task id="LOCAL-00012" summary="Adding methods to edit numbers for a contact">
+      <created>1668724652603</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1668724652603</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -114,6 +150,11 @@
     <MESSAGE value="Fixing the validation method and making it public" />
     <MESSAGE value="Removing work number for the sake of brevity" />
     <MESSAGE value="Removing email for the sake of brevity" />
-    <option name="LAST_COMMIT_MESSAGE" value="Removing email for the sake of brevity" />
+    <MESSAGE value="Creating the method to add a new contact" />
+    <MESSAGE value="Changing how indexing will work for the contact list" />
+    <MESSAGE value="Fixing incorrect validation" />
+    <MESSAGE value="Adding another check for a negative index. Adding updateContactName" />
+    <MESSAGE value="Adding methods to edit numbers for a contact" />
+    <option name="LAST_COMMIT_MESSAGE" value="Adding methods to edit numbers for a contact" />
   </component>
 </project>
