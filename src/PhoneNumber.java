@@ -3,8 +3,7 @@ import java.util.regex.Pattern;
 
 enum PhoneType {
     Home,
-    Cell,
-    Work
+    Cell
 }
 
 public class PhoneNumber {
