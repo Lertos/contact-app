@@ -51,19 +51,23 @@ public class ContactList {
         return true;
     }
 
-    public boolean removeContact(Contact contact) {
+    public boolean removeContact(int index) {
+        if (contactList.size() < index) {
+            contactList.remove(index);
+            return true;
+        }
         return false;
     }
 
-    public boolean updateContactName(Contact contact, String newName) {
+    public boolean updateContactName(int index, String newName) {
         return false;
     }
 
-    public boolean updateContactEmail(Contact contact, String newEmail) {
+    public boolean updateCellNumber(int index, String newNumber) {
         return false;
     }
 
-    public boolean updateContactNumber(Contact contact, PhoneType phoneType, String newNumber) {
+    public boolean updateHomeNumber(int index, String newNumber) {
         return false;
     }
 
