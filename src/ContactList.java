@@ -52,11 +52,11 @@ public class ContactList {
     }
 
     public boolean removeContact(int index) {
-        if (contactList.size() < index) {
-            contactList.remove(index);
-            return true;
-        }
-        return false;
+        if (contactList.size() < index)
+            return false;
+
+        contactList.remove(index);
+        return true;
     }
 
     public boolean updateContactName(int index, String newName) {
