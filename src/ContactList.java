@@ -52,15 +52,28 @@ public class ContactList {
     }
 
     public boolean removeContact(int index) {
-        if (contactList.size() < index)
+        if (contactList.size() < index || index < 0) {
+            System.out.println("The id provided does not exist.");
             return false;
+        }
 
         contactList.remove(index);
         return true;
     }
 
     public boolean updateContactName(int index, String newName) {
-        return false;
+        if (contactList.size() < index || index < 0) {
+            System.out.println("The id provided does not exist.");
+            return false;
+        }
+
+        if (nameExists(newName)) {
+            System.out.println("That contact name already exists.");
+            return false;
+        }
+
+        contactList.get(index).setName(newName);
+        return true;
     }
 
     public boolean updateCellNumber(int index, String newNumber) {
