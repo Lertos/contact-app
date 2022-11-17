@@ -6,8 +6,8 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
         String response = "-";
 
-        boolean phoneNumber = isValidPhoneNumber("1-555-555-5555", "cell");
-        boolean phoneNumber2 = isValidPhoneNumber("1-555-555-5555", "cell");
+        PhoneNumber phoneNumber = isValidPhoneNumber("1-555-555-5555", "cell");
+        PhoneNumber phoneNumber2 = isValidPhoneNumber("abcdef", "cell");
         System.out.println(phoneNumber);
         System.out.println(phoneNumber2);
 
@@ -16,13 +16,14 @@ public class Main {
         }
     }
 
-    private static boolean isValidPhoneNumber(String number, String phoneType) {
+    public static PhoneNumber isValidPhoneNumber(String number, String phoneType) {
+        PhoneNumber pn = null;
+
         try {
-            PhoneNumber pn = new PhoneNumber(number, phoneType);
+            pn = new PhoneNumber(number, phoneType);
         } catch (IllegalArgumentException e) {
             System.out.println(e.getMessage());
-            return false;
         }
-        return true;
+        return pn;
     }
 }
