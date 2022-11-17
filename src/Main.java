@@ -1,3 +1,4 @@
+import java.util.Map;
 import java.util.Scanner;
 
 public class Main {
@@ -6,14 +7,10 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
         String response = "-";
 
-        PhoneNumber phoneNumber = isValidPhoneNumber("1-555-555-5555", "cell");
-        PhoneNumber phoneNumber2 = isValidPhoneNumber("abcdef", "cell");
-        System.out.println(phoneNumber);
-        System.out.println(phoneNumber2);
+        ContactList contactList = new ContactList();
+        Menu menu = new Menu(contactList);
 
-        while(!response.equalsIgnoreCase("q")) {
-
-        }
+        menu.start();
     }
 
     public static PhoneNumber isValidPhoneNumber(String number, String phoneType) {

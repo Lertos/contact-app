@@ -1,5 +1,7 @@
 import java.util.HashMap;
 import java.util.Map;
+import java.util.NoSuchElementException;
+import java.util.Scanner;
 
 enum MenuState {
     MAIN,
@@ -12,10 +14,16 @@ enum MenuState {
 
 public class Menu {
 
+    private ContactList contactList;
+    private Scanner scanner;
     private MenuState currentState;
     private Map<Integer, MenuState> menuStates = new HashMap<>();
+    private int maxStates;
 
-    public Menu() {
+    public Menu(ContactList contactList) {
+        this.contactList = contactList;
+
+        this.scanner = new Scanner(System.in);
         this.currentState = MenuState.MAIN;
 
         this.menuStates.put(1, MenuState.MAIN);
@@ -24,36 +32,63 @@ public class Menu {
         this.menuStates.put(4, MenuState.EDIT_CONTACT);
         this.menuStates.put(5, MenuState.OUTPUT_CONTACTS);
         this.menuStates.put(6, MenuState.DELETE_LIST);
+
+        this.maxStates = Integer.MIN_VALUE;
+
+        for (Integer index : menuStates.keySet()) {
+            if (index > this.maxStates)
+                this.maxStates = index;
+        }
     }
 
-    public boolean switchState(int stateIndex) {
+    public void start() {
+        for (Map.Entry stateEntry : menuStates.entrySet()) {
+            if (stateEntry.getValue() == MenuState.MAIN)
+                switchState((int) stateEntry.getKey());
+        }
+    }
+
+    public void switchState(int stateIndex) {
         switch (stateIndex) {
             case 1 :
                 stateMainMenu();
-                return true;
+                break;
             case 2 :
                 stateAddContact();
-                return true;
+                break;
             case 3 :
                 stateRemoveContact();
-                return true;
+                break;
             case 4 :
                 stateEditContact();
-                return true;
+                break;
             case 5 :
                 stateOutputContacts();
-                return true;
+                break;
             case 6 :
                 stateDeleteContacts();
-                return true;
-            default :
-                System.out.println("The given index was not valid");
-                return false;
+                break;
         }
     }
 
     private void stateMainMenu() {
+        int chosenOption = -1;
 
+        while (chosenOption < 0 || chosenOption > maxStates) {
+            System.out.println("===MAIN MENU");
+            for (Map.Entry stateEntry : menuStates.entrySet()) {
+                String readableOption = stateEntry.getValue().toString().replace("_", " ");
+
+                System.out.println("\t" + stateEntry.getKey() + " - " + readableOption);
+            }
+
+            System.out.println("\n Please pick your option by supplying a number.");
+
+            chosenOption = scanner.nextInt();
+            scanner.nextLine();
+        }
+
+        switchState(chosenOption);
     }
 
     private void stateAddContact() {
