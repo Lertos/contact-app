@@ -1,12 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="3bee9145-3d5d-4ca9-a7bf-c774dd3bfa4d" name="Changes" comment="Getting skeleton of classes created">
+    <list default="true" id="3bee9145-3d5d-4ca9-a7bf-c774dd3bfa4d" name="Changes" comment="Creating validation for phone numbers">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Contact.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Contact.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ContactList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ContactList.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/PhoneNumber.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PhoneNumber.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,7 +52,21 @@
       <option name="project" value="LOCAL" />
       <updated>1668561223022</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Adding getters and setters">
+      <created>1668647504871</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1668647504871</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Creating validation for phone numbers">
+      <created>1668647546582</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1668647546582</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -70,6 +82,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Getting skeleton of classes created" />
-    <option name="LAST_COMMIT_MESSAGE" value="Getting skeleton of classes created" />
+    <MESSAGE value="Adding getters and setters" />
+    <MESSAGE value="Creating validation for phone numbers" />
+    <option name="LAST_COMMIT_MESSAGE" value="Creating validation for phone numbers" />
   </component>
 </project>
