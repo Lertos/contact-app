@@ -1,3 +1,6 @@
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
 enum PhoneType {
     Home,
     Cell,
@@ -10,8 +13,8 @@ public class PhoneNumber {
     private final PhoneType phoneType;
 
     public PhoneNumber(String phoneNumber, String phoneType) {
-        if (isInvalidPhoneNumber(phoneNumber)) {
-            throw new IllegalArgumentException("Phone number is not valid!");
+        if (!isValidPhoneNumber(phoneNumber)) {
+            throw new IllegalArgumentException("Phone number is not valid! Format is: x-xxx-xxx-xxxx");
         }
 
         this.phoneNumber = phoneNumber;
@@ -22,12 +25,19 @@ public class PhoneNumber {
         }
     }
 
-    private boolean isInvalidPhoneNumber(String phoneNumber) {
+    private boolean isValidPhoneNumber(String phoneNumber) {
+        Pattern pattern = Pattern.compile("^\\d-\\d\\d\\d-\\d\\d\\d-\\d\\d\\d\\d$");
+        Matcher matcher = pattern.matcher(phoneNumber);
 
+        return matcher.find();
     }
 
-    private PhoneType getPhoneType(String phoneType) {
-
+    public PhoneType getPhoneType(String phoneType) {
+        for (PhoneType pt : PhoneType.values()) {
+            if (pt.name().equalsIgnoreCase(phoneType)) {
+                return pt;
+            }
+        }
         return null;
     }
 
