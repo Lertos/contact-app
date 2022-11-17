@@ -77,11 +77,51 @@ public class ContactList {
     }
 
     public boolean updateCellNumber(int index, String newNumber) {
-        return false;
+        if (contactList.size() < index || index < 0) {
+            System.out.println("The id provided does not exist.");
+            return false;
+        }
+
+        if (cellNumberExists(newNumber)) {
+            System.out.println("That cell number already exists.");
+            return false;
+        }
+
+        PhoneNumber newCellNumber = null;
+
+        if (newNumber != "") {
+            newCellNumber = Main.isValidPhoneNumber(newNumber, "cell");
+
+            if (newCellNumber == null)
+                return false;
+        }
+
+        contactList.get(index).setCellNumber(newCellNumber);
+        return true;
     }
 
     public boolean updateHomeNumber(int index, String newNumber) {
-        return false;
+        if (contactList.size() < index || index < 0) {
+            System.out.println("The id provided does not exist.");
+            return false;
+        }
+
+        if (homeNumberExists(newNumber)) {
+            System.out.println("That home number already exists.");
+            return false;
+        }
+
+        PhoneNumber newHomeNumber = null;
+
+        if (newNumber != "") {
+            newHomeNumber = Main.isValidPhoneNumber(newNumber, "cell");
+
+            if (newHomeNumber == null)
+                return false;
+        }
+
+        contactList.get(index).setHomeNumber(newHomeNumber);
+        return true;
     }
 
     private boolean nameExists(String name) {
