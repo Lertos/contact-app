@@ -1,7 +1,4 @@
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Map;
-import java.util.Scanner;
+import java.util.*;
 
 enum MenuKey {
     MAIN_MENU,
@@ -14,15 +11,30 @@ enum MenuKey {
 
 public class Menu {
 
+    private Map<MenuKey, MenuOptionList> menuOptionLists;
     private ContactList contactList;
     private Scanner scanner;
 
     public Menu(ContactList contactList) {
+        this.menuOptionLists = new HashMap<>();
         this.contactList = contactList;
         this.scanner = new Scanner(System.in);
     }
 
     public void start() {
+        //Create all the menu option lists
+        MenuOptionList mainMenu = new MenuOptionList();
+
+        //Fill each menu option list
+        mainMenu.addMenuOption(new MenuOption("1", MenuKey.ADD_CONTACT, "Add a new contact"));
+        mainMenu.addMenuOption(new MenuOption("2", MenuKey.EDIT_CONTACT, "Edit an existing contact"));
+        mainMenu.addMenuOption(new MenuOption("3", MenuKey.REMOVE_CONTACT, "Remove an existing contact"));
+        mainMenu.addMenuOption(new MenuOption("4", MenuKey.OUTPUT_CONTACTS, "Show all contacts"));
+        mainMenu.addMenuOption(new MenuOption("5", MenuKey.DELETE_LIST, "Clear all contacts"));
+
+        //Add each menu option list to the master list
+        menuOptionLists.put(MenuKey.MAIN_MENU, mainMenu);
+
         switchState(MenuKey.MAIN_MENU);
     }
 
@@ -114,12 +126,12 @@ public class Menu {
     private class MenuOption {
 
         private String keyOption;
-        private MenuOption menuOption;
+        private MenuKey menuKey;
         private String optionText;
 
-        public MenuOption(String keyOption, MenuOption menuOption, String optionText) {
+        public MenuOption(String keyOption, MenuKey menuKey, String optionText) {
             this.keyOption = keyOption;
-            this.menuOption = menuOption;
+            this.menuKey = menuKey;
             this.optionText = optionText;
         }
 
