@@ -1,10 +1,10 @@
-import java.util.HashMap;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Map;
-import java.util.NoSuchElementException;
 import java.util.Scanner;
 
-enum MenuState {
-    MAIN,
+enum MenuKey {
+    MAIN_MENU,
     ADD_CONTACT,
     REMOVE_CONTACT,
     EDIT_CONTACT,
@@ -16,62 +16,41 @@ public class Menu {
 
     private ContactList contactList;
     private Scanner scanner;
-    private MenuState currentState;
-    private Map<Integer, MenuState> menuStates = new HashMap<>();
-    private int maxStates;
 
     public Menu(ContactList contactList) {
         this.contactList = contactList;
-
         this.scanner = new Scanner(System.in);
-        this.currentState = MenuState.MAIN;
-
-        this.menuStates.put(1, MenuState.MAIN);
-        this.menuStates.put(2, MenuState.ADD_CONTACT);
-        this.menuStates.put(3, MenuState.REMOVE_CONTACT);
-        this.menuStates.put(4, MenuState.EDIT_CONTACT);
-        this.menuStates.put(5, MenuState.OUTPUT_CONTACTS);
-        this.menuStates.put(6, MenuState.DELETE_LIST);
-
-        this.maxStates = Integer.MIN_VALUE;
-
-        for (Integer index : menuStates.keySet()) {
-            if (index > this.maxStates)
-                this.maxStates = index;
-        }
     }
 
     public void start() {
-        for (Map.Entry stateEntry : menuStates.entrySet()) {
-            if (stateEntry.getValue() == MenuState.MAIN)
-                switchState((int) stateEntry.getKey());
+        switchState(MenuKey.MAIN_MENU);
+    }
+
+    public void switchState(MenuKey state) {
+        switch (state) {
+            case MAIN_MENU:
+                menuMain();
+                break;
+            case ADD_CONTACT:
+                menuAddContact();
+                break;
+            case REMOVE_CONTACT:
+                menuRemoveContact();
+                break;
+            case EDIT_CONTACT:
+                menuEditContact();
+                break;
+            case OUTPUT_CONTACTS:
+                menuOutputContacts();
+                break;
+            case DELETE_LIST:
+                menuDeleteContacts();
+                break;
         }
     }
 
-    public void switchState(int stateIndex) {
-        switch (stateIndex) {
-            case 1 :
-                stateMainMenu();
-                break;
-            case 2 :
-                stateAddContact();
-                break;
-            case 3 :
-                stateRemoveContact();
-                break;
-            case 4 :
-                stateEditContact();
-                break;
-            case 5 :
-                stateOutputContacts();
-                break;
-            case 6 :
-                stateDeleteContacts();
-                break;
-        }
-    }
-
-    private void stateMainMenu() {
+    private void menuMain() {
+        /*
         int chosenOption = -1;
 
         while (chosenOption < 0 || chosenOption > maxStates) {
@@ -89,26 +68,65 @@ public class Menu {
         }
 
         switchState(chosenOption);
+        */
     }
 
-    private void stateAddContact() {
-
-    }
-
-    private void stateRemoveContact() {
+    private void menuAddContact() {
 
     }
 
-    private void stateEditContact() {
+    private void menuRemoveContact() {
 
     }
 
-    private void stateOutputContacts() {
+    private void menuEditContact() {
 
     }
 
-    private void stateDeleteContacts() {
+    private void menuOutputContacts() {
 
+    }
+
+    private void menuDeleteContacts() {
+
+    }
+
+    private class MenuOptionList {
+
+        private List<MenuOption> menuOptionList;
+
+        public MenuOptionList() {
+            this.menuOptionList = new ArrayList<>();
+        }
+
+        public void addMenuOption(MenuOption menuOption) {
+            this.menuOptionList.add(menuOption);
+        }
+
+        public void outputMenuOptions() {
+            for(MenuOption menuOption : menuOptionList) {
+                System.out.println(menuOption.toString());
+            }
+        }
+
+    }
+
+    private class MenuOption {
+
+        private String keyOption;
+        private MenuOption menuOption;
+        private String optionText;
+
+        public MenuOption(String keyOption, MenuOption menuOption, String optionText) {
+            this.keyOption = keyOption;
+            this.menuOption = menuOption;
+            this.optionText = optionText;
+        }
+
+        @Override
+        public String toString() {
+            return keyOption + " - " + optionText;
+        }
     }
 
 
