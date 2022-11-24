@@ -40,4 +40,8 @@ public class PhoneNumber {
         return null;
     }
 
+    @Override
+    public String toString() {
+        return phoneType.toString().toUpperCase() + ": " + phoneNumber;
+    }
 }
