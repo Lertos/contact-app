@@ -13,6 +13,10 @@ public class ContactList {
         contactList.clear();
     }
 
+    public int size() {
+        return contactList.size();
+    }
+
     public void outputContactList() {
         int index = 0;
 

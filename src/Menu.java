@@ -141,7 +141,10 @@ public class Menu {
     }
 
     private void menuOutputContacts() {
-        contactList.outputContactList();
+        if (contactList.size() == 0)
+            System.out.println("\nYou currently have no contacts to show");
+        else
+            contactList.outputContactList();
 
         System.out.println("");
         switchState(MenuKey.MAIN_MENU);
