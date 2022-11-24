@@ -127,6 +127,14 @@ public class Menu {
             this.menuOptionList.add(menuOption);
         }
 
+        public MenuKey getMenuFromKey(String response) {
+            for(MenuOption menuOption : menuOptionList) {
+                if(response.equalsIgnoreCase(menuOption.keyOption))
+                    return menuOption.menuKey;
+            }
+            return null;
+        }
+
         public void outputMenuOptions() {
             for(MenuOption menuOption : menuOptionList) {
                 System.out.println(menuOption.toString());
