@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="3bee9145-3d5d-4ca9-a7bf-c774dd3bfa4d" name="Changes" comment="Scrapping old state idea. Using menu options instead">
+    <list default="true" id="3bee9145-3d5d-4ca9-a7bf-c774dd3bfa4d" name="Changes" comment="Setting up the main menu option list">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Menu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Menu.java" afterDir="false" />
     </list>
@@ -156,7 +156,14 @@
       <option name="project" value="LOCAL" />
       <updated>1669164706482</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="Setting up the main menu option list">
+      <created>1669165271229</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1669165271229</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -187,6 +194,7 @@
     <MESSAGE value="Adding base states to the menu" />
     <MESSAGE value="Adding the menu start method, as well as the main menu" />
     <MESSAGE value="Scrapping old state idea. Using menu options instead" />
-    <option name="LAST_COMMIT_MESSAGE" value="Scrapping old state idea. Using menu options instead" />
+    <MESSAGE value="Setting up the main menu option list" />
+    <option name="LAST_COMMIT_MESSAGE" value="Setting up the main menu option list" />
   </component>
 </project>

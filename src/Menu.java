@@ -24,6 +24,9 @@ public class Menu {
     public void start() {
         //Create all the menu option lists
         MenuOptionList mainMenu = new MenuOptionList();
+        MenuOptionList addContactMenu = new MenuOptionList();
+        MenuOptionList removeContactMenu = new MenuOptionList();
+        MenuOptionList editContactMenu = new MenuOptionList();
 
         //Fill each menu option list
         mainMenu.addMenuOption(new MenuOption("1", MenuKey.ADD_CONTACT, "Add a new contact"));
@@ -32,8 +35,17 @@ public class Menu {
         mainMenu.addMenuOption(new MenuOption("4", MenuKey.OUTPUT_CONTACTS, "Show all contacts"));
         mainMenu.addMenuOption(new MenuOption("5", MenuKey.DELETE_LIST, "Clear all contacts"));
 
+        addContactMenu.addMenuOption(new MenuOption("1", MenuKey.MAIN_MENU, "Return to the main menu"));
+
+        removeContactMenu.addMenuOption(new MenuOption("1", MenuKey.MAIN_MENU, "Return to the main menu"));
+
+        editContactMenu.addMenuOption(new MenuOption("1", MenuKey.MAIN_MENU, "Return to the main menu"));
+
         //Add each menu option list to the master list
         menuOptionLists.put(MenuKey.MAIN_MENU, mainMenu);
+        menuOptionLists.put(MenuKey.ADD_CONTACT, addContactMenu);
+        menuOptionLists.put(MenuKey.REMOVE_CONTACT, removeContactMenu);
+        menuOptionLists.put(MenuKey.EDIT_CONTACT, editContactMenu);
 
         switchState(MenuKey.MAIN_MENU);
     }
