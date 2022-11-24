@@ -97,7 +97,39 @@ public class Menu {
     }
 
     private void menuAddContact() {
-        System.out.println("Add contact test");
+        MenuOptionList addContactMenu = menuOptionLists.get(MenuKey.ADD_CONTACT);
+        MenuKey menuKey = MenuKey.MAIN_MENU;
+        boolean givenValidKey = false;
+        String response;
+
+        while (!givenValidKey) {
+            addContactMenu.outputMenuOptions();
+            System.out.println("\nTo add a contact please enter in a name and two valid phone numbers.");
+            System.out.println("Use the format: (NAME) (CELL PHONE) (HOME PHONE)");
+            System.out.println("EXAMPLE: Jake 1-555-555-5555 1-444-444-4444\n");
+
+            response = scanner.nextLine();
+            menuKey = addContactMenu.getMenuFromKey(response);
+
+            if(menuKey != null)
+                givenValidKey = true;
+            else {
+                String[] pieces = response.split(" ");
+
+                if(pieces.length < 3)
+                    System.out.println("That was not a valid option");
+                else {
+                    if(contactList.addContact(pieces[0], pieces[1], pieces[2])) {
+                        System.out.println("Your new contact has been added!");
+                    } else {
+                        System.out.println("That was an invalid format for a contact");
+                    }
+                }
+            }
+            System.out.println("");
+        }
+
+        switchState(menuKey);
     }
 
     private void menuRemoveContact() {
