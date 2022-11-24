@@ -33,4 +33,9 @@ public class Contact {
     public void setHomeNumber(PhoneNumber homeNumber) {
         this.homeNumber = homeNumber;
     }
+
+    @Override
+    public String toString() {
+        return "NAME: " + name + "\tCELL: " + cellNumber + "\tHOME: " + homeNumber;
+    }
 }
