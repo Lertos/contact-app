@@ -141,11 +141,18 @@ public class Menu {
     }
 
     private void menuOutputContacts() {
+        contactList.outputContactList();
 
+        System.out.println("");
+        switchState(MenuKey.MAIN_MENU);
     }
 
     private void menuDeleteContacts() {
+        contactList.emptyContactList();
+        System.out.println("\nYour contact list is now empty");
 
+        System.out.println("");
+        switchState(MenuKey.MAIN_MENU);
     }
 
     private class MenuOptionList {
