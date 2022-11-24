@@ -47,6 +47,8 @@ public class Menu {
         menuOptionLists.put(MenuKey.REMOVE_CONTACT, removeContactMenu);
         menuOptionLists.put(MenuKey.EDIT_CONTACT, editContactMenu);
 
+        System.out.println("Welcome to your contact list. To navigate through the list, type the numbers beside the available options.\n");
+
         switchState(MenuKey.MAIN_MENU);
     }
 
@@ -74,29 +76,28 @@ public class Menu {
     }
 
     private void menuMain() {
-        /*
-        int chosenOption = -1;
+        MenuOptionList mainMenu = menuOptionLists.get(MenuKey.MAIN_MENU);
+        MenuKey menuKey = null;
+        boolean givenValidKey = false;
+        String response;
 
-        while (chosenOption < 0 || chosenOption > maxStates) {
-            System.out.println("===MAIN MENU");
-            for (Map.Entry stateEntry : menuStates.entrySet()) {
-                String readableOption = stateEntry.getValue().toString().replace("_", " ");
+        while (!givenValidKey) {
+            mainMenu.outputMenuOptions();
 
-                System.out.println("\t" + stateEntry.getKey() + " - " + readableOption);
-            }
+            response = scanner.nextLine();
+            menuKey = mainMenu.getMenuFromKey(response);
 
-            System.out.println("\n Please pick your option by supplying a number.");
-
-            chosenOption = scanner.nextInt();
-            scanner.nextLine();
+            if(menuKey != null)
+                givenValidKey = true;
+            else
+                System.out.println("\nThat was not a valid option\n");
         }
 
-        switchState(chosenOption);
-        */
+        switchState(menuKey);
     }
 
     private void menuAddContact() {
-
+        System.out.println("Add contact test");
     }
 
     private void menuRemoveContact() {
