@@ -13,6 +13,15 @@ public class ContactList {
         contactList.clear();
     }
 
+    public void outputContactList() {
+        int index = 0;
+
+        for (Contact contact : contactList) {
+            System.out.println(index + " - " + contact.toString());
+            index++;
+        }
+    }
+
     public boolean addContact(String name, String cellNumber, String homeNumber) {
         if (nameExists(name)) {
             System.out.println("That contact name already exists.");
