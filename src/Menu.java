@@ -35,11 +35,11 @@ public class Menu {
         mainMenu.addMenuOption(new MenuOption("4", MenuKey.OUTPUT_CONTACTS, "Show all contacts"));
         mainMenu.addMenuOption(new MenuOption("5", MenuKey.DELETE_LIST, "Clear all contacts"));
 
-        addContactMenu.addMenuOption(new MenuOption("1", MenuKey.MAIN_MENU, "Return to the main menu"));
+        addContactMenu.addMenuOption(new MenuOption("Q", MenuKey.MAIN_MENU, "Return to the main menu"));
 
-        removeContactMenu.addMenuOption(new MenuOption("1", MenuKey.MAIN_MENU, "Return to the main menu"));
+        removeContactMenu.addMenuOption(new MenuOption("Q", MenuKey.MAIN_MENU, "Return to the main menu"));
 
-        editContactMenu.addMenuOption(new MenuOption("1", MenuKey.MAIN_MENU, "Return to the main menu"));
+        editContactMenu.addMenuOption(new MenuOption("Q", MenuKey.MAIN_MENU, "Return to the main menu"));
 
         //Add each menu option list to the master list
         menuOptionLists.put(MenuKey.MAIN_MENU, mainMenu);
@@ -121,6 +121,7 @@ public class Menu {
                 else {
                     if(contactList.addContact(pieces[0], pieces[1], pieces[2])) {
                         System.out.println("Your new contact has been added!");
+                        givenValidKey = true;
                     } else {
                         System.out.println("That was an invalid format for a contact");
                     }
@@ -133,7 +134,42 @@ public class Menu {
     }
 
     private void menuRemoveContact() {
+        MenuOptionList removeContactMenu = menuOptionLists.get(MenuKey.REMOVE_CONTACT);
+        MenuKey menuKey = MenuKey.MAIN_MENU;
+        boolean givenValidKey = false;
+        String response;
 
+        while (!givenValidKey) {
+            removeContactMenu.outputMenuOptions();
+            contactList.outputContactList();
+
+            System.out.println("\nTo remove a contact please enter in the number shown at the start of the line for a contact.");
+
+            response = scanner.nextLine();
+            menuKey = removeContactMenu.getMenuFromKey(response);
+
+            if(menuKey != null)
+                givenValidKey = true;
+            else {
+                int contactIndex;
+                try {
+                    contactIndex = Integer.parseInt(response);
+
+                    if (contactIndex < 0 || contactIndex >= contactList.size()) {
+                        System.out.println("That was not a valid contact number. It must be between 0 and " + (contactList.size() - 1));
+                    } else {
+                        contactList.removeContact(contactIndex);
+                        System.out.println("Your contact has been successfully removed!");
+                        givenValidKey = true;
+                    }
+                } catch (Exception e) {
+                    System.out.println("That was not a valid option");
+                }
+            }
+            System.out.println("");
+        }
+
+        switchState(menuKey);
     }
 
     private void menuEditContact() {
