@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="3bee9145-3d5d-4ca9-a7bf-c774dd3bfa4d" name="Changes" comment="Fixing blank output when no contacts exists">
+    <list default="true" id="3bee9145-3d5d-4ca9-a7bf-c774dd3bfa4d" name="Changes" comment="Adding remove contact method">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ContactList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ContactList.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Menu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Menu.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -226,7 +227,14 @@
       <option name="project" value="LOCAL" />
       <updated>1669254896691</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="Adding remove contact method">
+      <created>1669255412127</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1669255412127</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -241,7 +249,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Adding getters and setters" />
     <MESSAGE value="Creating validation for phone numbers" />
     <MESSAGE value="Creating a private method to check valid phone numbers" />
     <MESSAGE value="Fixing the validation method and making it public" />
@@ -266,6 +273,7 @@
     <MESSAGE value="Fixing output of contacts" />
     <MESSAGE value="Adding toStrings and fixing output look" />
     <MESSAGE value="Fixing blank output when no contacts exists" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixing blank output when no contacts exists" />
+    <MESSAGE value="Adding remove contact method" />
+    <option name="LAST_COMMIT_MESSAGE" value="Adding remove contact method" />
   </component>
 </project>

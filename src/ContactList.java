@@ -17,6 +17,10 @@ public class ContactList {
         return contactList.size();
     }
 
+    public Contact getContact(int index) {
+        return contactList.get(index);
+    }
+
     public void outputContactList() {
         int index = 0;
 
