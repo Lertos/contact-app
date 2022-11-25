@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="3bee9145-3d5d-4ca9-a7bf-c774dd3bfa4d" name="Changes" comment="Adding additional error message">
+    <list default="true" id="3bee9145-3d5d-4ca9-a7bf-c774dd3bfa4d" name="Changes" comment="Fixing issue with case statement">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Menu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Menu.java" afterDir="false" />
     </list>
@@ -247,7 +247,14 @@
       <option name="project" value="LOCAL" />
       <updated>1669337365309</updated>
     </task>
-    <option name="localTasksCounter" value="30" />
+    <task id="LOCAL-00030" summary="Fixing issue with case statement">
+      <created>1669337581127</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1669337581127</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -262,7 +269,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Fixing the validation method and making it public" />
     <MESSAGE value="Removing work number for the sake of brevity" />
     <MESSAGE value="Removing email for the sake of brevity" />
     <MESSAGE value="Creating the method to add a new contact" />
@@ -287,6 +293,7 @@
     <MESSAGE value="Adding remove contact method" />
     <MESSAGE value="Adding a get method to get the contact" />
     <MESSAGE value="Adding additional error message" />
-    <option name="LAST_COMMIT_MESSAGE" value="Adding additional error message" />
+    <MESSAGE value="Fixing issue with case statement" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixing issue with case statement" />
   </component>
 </project>
