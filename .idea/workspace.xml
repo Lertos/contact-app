@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="3bee9145-3d5d-4ca9-a7bf-c774dd3bfa4d" name="Changes" comment="Adding remove contact method">
+    <list default="true" id="3bee9145-3d5d-4ca9-a7bf-c774dd3bfa4d" name="Changes" comment="Adding a get method to get the contact">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ContactList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ContactList.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Menu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Menu.java" afterDir="false" />
@@ -234,7 +234,14 @@
       <option name="project" value="LOCAL" />
       <updated>1669255412127</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="Adding a get method to get the contact">
+      <created>1669337176084</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1669337176084</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -249,7 +256,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Creating validation for phone numbers" />
     <MESSAGE value="Creating a private method to check valid phone numbers" />
     <MESSAGE value="Fixing the validation method and making it public" />
     <MESSAGE value="Removing work number for the sake of brevity" />
@@ -274,6 +280,7 @@
     <MESSAGE value="Adding toStrings and fixing output look" />
     <MESSAGE value="Fixing blank output when no contacts exists" />
     <MESSAGE value="Adding remove contact method" />
-    <option name="LAST_COMMIT_MESSAGE" value="Adding remove contact method" />
+    <MESSAGE value="Adding a get method to get the contact" />
+    <option name="LAST_COMMIT_MESSAGE" value="Adding a get method to get the contact" />
   </component>
 </project>

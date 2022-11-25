@@ -109,8 +109,10 @@ public class ContactList {
         if (newNumber != "") {
             newCellNumber = Main.isValidPhoneNumber(newNumber, "cell");
 
-            if (newCellNumber == null)
+            if (newCellNumber == null) {
+                System.out.println("That is an invalid phone number");
                 return false;
+            }
         }
 
         contactList.get(index).setCellNumber(newCellNumber);
@@ -133,8 +135,10 @@ public class ContactList {
         if (newNumber != "") {
             newHomeNumber = Main.isValidPhoneNumber(newNumber, "cell");
 
-            if (newHomeNumber == null)
+            if (newHomeNumber == null) {
+                System.out.println("That is an invalid phone number");
                 return false;
+            }
         }
 
         contactList.get(index).setHomeNumber(newHomeNumber);
