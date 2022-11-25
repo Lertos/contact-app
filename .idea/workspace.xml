@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="3bee9145-3d5d-4ca9-a7bf-c774dd3bfa4d" name="Changes" comment="Fixing issue with case statement">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="3bee9145-3d5d-4ca9-a7bf-c774dd3bfa4d" name="Changes" comment="Fixing issue with case statement x2">
       <change beforePath="$PROJECT_DIR$/src/Menu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Menu.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -254,7 +253,14 @@
       <option name="project" value="LOCAL" />
       <updated>1669337581127</updated>
     </task>
-    <option name="localTasksCounter" value="31" />
+    <task id="LOCAL-00031" summary="Fixing issue with case statement x2">
+      <created>1669337709761</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1669337709761</updated>
+    </task>
+    <option name="localTasksCounter" value="32" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -269,7 +275,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Removing work number for the sake of brevity" />
     <MESSAGE value="Removing email for the sake of brevity" />
     <MESSAGE value="Creating the method to add a new contact" />
     <MESSAGE value="Changing how indexing will work for the contact list" />
@@ -294,6 +299,7 @@
     <MESSAGE value="Adding a get method to get the contact" />
     <MESSAGE value="Adding additional error message" />
     <MESSAGE value="Fixing issue with case statement" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixing issue with case statement" />
+    <MESSAGE value="Fixing issue with case statement x2" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixing issue with case statement x2" />
   </component>
 </project>

@@ -176,7 +176,89 @@ public class Menu {
     }
 
     private void menuEditContact() {
+        MenuOptionList editContactMenu = menuOptionLists.get(MenuKey.EDIT_CONTACT);
+        MenuKey menuKey = MenuKey.MAIN_MENU;
+        boolean givenValidKey = false;
+        String response;
 
+        while (!givenValidKey) {
+            editContactMenu.outputMenuOptions();
+            contactList.outputContactList();
+
+            System.out.println("\nTo edit a contact please enter in the number shown at the start of the line for a contact.");
+
+            response = scanner.nextLine();
+            menuKey = editContactMenu.getMenuFromKey(response);
+
+            if(menuKey != null)
+                givenValidKey = true;
+            else {
+                int contactIndex;
+                try {
+                    contactIndex = Integer.parseInt(response);
+
+                    if (contactIndex < 0 || contactIndex >= contactList.size()) {
+                        System.out.println("That was not a valid contact number. It must be between 0 and " + (contactList.size() - 1));
+                    } else {
+                        boolean contactUpdated = updateContact(contactIndex);
+
+                        if (contactUpdated) {
+                            System.out.println("Your contact has been successfully updated!");
+                            givenValidKey = true;
+                        }
+                    }
+                } catch (Exception e) {
+                    System.out.println("That was not a valid option");
+                }
+            }
+            System.out.println("");
+        }
+
+        switchState(menuKey);
+    }
+
+    private boolean updateContact(int contactIndex) {
+        String response;
+        int chosenOption;
+        boolean isContactChosen = false;
+
+        while(!isContactChosen) {
+            System.out.println("You are currently editing the contact: " + contactList.getContact(contactIndex).toString() + "\n");
+            System.out.println("1 - Change their name");
+            System.out.println("2 - Change their cell number");
+            System.out.println("3 - Change their home number");
+            response = scanner.nextLine();
+
+            try {
+                chosenOption = Integer.parseInt(response);
+
+                if (chosenOption < 1 || chosenOption > 3) {
+                    System.out.println("That was not a valid contact number. It must be between 1 and 3");
+                } else {
+                    if (chosenOption == 1) {
+                        System.out.println("Enter in the name you want to change it to: ");
+                        response = scanner.nextLine();
+
+                        return contactList.updateContactName(contactIndex, response);
+                    } else if (chosenOption == 2) {
+                        System.out.println("Enter in the new cell number you want to change it to: ");
+                        response = scanner.nextLine();
+
+                        return contactList.updateCellNumber(contactIndex, response);
+                    } else if (chosenOption == 3) {
+                        System.out.println("Enter in the new home number you want to change it to: ");
+                        response = scanner.nextLine();
+
+                        return contactList.updateHomeNumber(contactIndex, response);
+                    }
+                }
+            } catch(Exception e) {
+                if (response.equalsIgnoreCase("Q"))
+                    return false;
+                System.out.println("That was not a valid option");
+            }
+        }
+        return true;
     }
 
     private void menuOutputContacts() {
