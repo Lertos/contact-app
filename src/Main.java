@@ -1,12 +1,6 @@
-import java.util.Map;
-import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-
-        Scanner scanner = new Scanner(System.in);
-        String response = "-";
-
         ContactList contactList = new ContactList();
         Menu menu = new Menu(contactList);
 

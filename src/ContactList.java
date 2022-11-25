@@ -3,7 +3,7 @@ import java.util.List;
 
 public class ContactList {
 
-    private List<Contact> contactList;
+    private final List<Contact> contactList;
 
     public ContactList() {
         this.contactList = new ArrayList<>();
@@ -45,14 +45,14 @@ public class ContactList {
         PhoneNumber newCellNumber = null;
         PhoneNumber newHomeNumber = null;
 
-        if (cellNumber != "") {
+        if (!cellNumber.isEmpty()) {
             newCellNumber = Main.isValidPhoneNumber(cellNumber, "cell");
 
             if (newCellNumber == null)
                 return false;
         }
 
-        if (homeNumber != "") {
+        if (!homeNumber.isEmpty()) {
             newHomeNumber = Main.isValidPhoneNumber(homeNumber, "home");
 
             if (newHomeNumber == null)
@@ -68,14 +68,13 @@ public class ContactList {
         return true;
     }
 
-    public boolean removeContact(int index) {
+    public void removeContact(int index) {
         if (contactList.size() < index || index < 0) {
             System.out.println("The id provided does not exist.");
-            return false;
+            return;
         }
 
         contactList.remove(index);
-        return true;
     }
 
     public boolean updateContactName(int index, String newName) {
@@ -106,7 +105,7 @@ public class ContactList {
 
         PhoneNumber newCellNumber = null;
 
-        if (newNumber != "") {
+        if (!newNumber.isEmpty()) {
             newCellNumber = Main.isValidPhoneNumber(newNumber, "cell");
 
             if (newCellNumber == null) {
@@ -132,7 +131,7 @@ public class ContactList {
 
         PhoneNumber newHomeNumber = null;
 
-        if (newNumber != "") {
+        if (!newNumber.isEmpty()) {
             newHomeNumber = Main.isValidPhoneNumber(newNumber, "cell");
 
             if (newHomeNumber == null) {

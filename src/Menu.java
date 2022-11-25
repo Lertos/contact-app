@@ -11,9 +11,9 @@ enum MenuKey {
 
 public class Menu {
 
-    private Map<MenuKey, MenuOptionList> menuOptionLists;
-    private ContactList contactList;
-    private Scanner scanner;
+    private final Map<MenuKey, MenuOptionList> menuOptionLists;
+    private final ContactList contactList;
+    private final Scanner scanner;
 
     public Menu(ContactList contactList) {
         this.menuOptionLists = new HashMap<>();
@@ -57,24 +57,12 @@ public class Menu {
             state = MenuKey.MAIN_MENU;
 
         switch (state) {
-            case MAIN_MENU:
-                menuMain();
-                break;
-            case ADD_CONTACT:
-                menuAddContact();
-                break;
-            case REMOVE_CONTACT:
-                menuRemoveContact();
-                break;
-            case EDIT_CONTACT:
-                menuEditContact();
-                break;
-            case OUTPUT_CONTACTS:
-                menuOutputContacts();
-                break;
-            case DELETE_LIST:
-                menuDeleteContacts();
-                break;
+            case MAIN_MENU -> menuMain();
+            case ADD_CONTACT -> menuAddContact();
+            case REMOVE_CONTACT -> menuRemoveContact();
+            case EDIT_CONTACT -> menuEditContact();
+            case OUTPUT_CONTACTS -> menuOutputContacts();
+            case DELETE_LIST -> menuDeleteContacts();
         }
     }
 
@@ -130,7 +118,7 @@ public class Menu {
                     }
                 }
             }
-            System.out.println("");
+            System.out.println();
         }
 
         switchState(menuKey);
@@ -169,7 +157,7 @@ public class Menu {
                     System.out.println("That was not a valid option");
                 }
             }
-            System.out.println("");
+            System.out.println();
         }
 
         switchState(menuKey);
@@ -211,7 +199,7 @@ public class Menu {
                     System.out.println("That was not a valid option");
                 }
             }
-            System.out.println("");
+            System.out.println();
         }
 
         switchState(menuKey);
@@ -220,9 +208,8 @@ public class Menu {
     private boolean updateContact(int contactIndex) {
         String response;
         int chosenOption;
-        boolean isContactChosen = false;
 
-        while(!isContactChosen) {
+        while(true) {
             System.out.println("You are currently editing the contact: " + contactList.getContact(contactIndex).toString() + "\n");
             System.out.println("1 - Change their name");
             System.out.println("2 - Change their cell number");
@@ -245,7 +232,7 @@ public class Menu {
                         response = scanner.nextLine();
 
                         return contactList.updateCellNumber(contactIndex, response);
-                    } else if (chosenOption == 3) {
+                    } else {
                         System.out.println("Enter in the new home number you want to change it to: ");
                         response = scanner.nextLine();
 
@@ -258,7 +245,6 @@ public class Menu {
                 System.out.println("That was not a valid option");
             }
         }
-        return true;
     }
 
     private void menuOutputContacts() {
@@ -267,7 +253,7 @@ public class Menu {
         else
             contactList.outputContactList();
 
-        System.out.println("");
+        System.out.println();
         switchState(MenuKey.MAIN_MENU);
     }
 
@@ -275,13 +261,13 @@ public class Menu {
         contactList.emptyContactList();
         System.out.println("\nYour contact list is now empty");
 
-        System.out.println("");
+        System.out.println();
         switchState(MenuKey.MAIN_MENU);
     }
 
     private class MenuOptionList {
 
-        private List<MenuOption> menuOptionList;
+        private final List<MenuOption> menuOptionList;
 
         public MenuOptionList() {
             this.menuOptionList = new ArrayList<>();
@@ -309,9 +295,9 @@ public class Menu {
 
     private class MenuOption {
 
-        private String keyOption;
-        private MenuKey menuKey;
-        private String optionText;
+        private final String keyOption;
+        private final MenuKey menuKey;
+        private final String optionText;
 
         public MenuOption(String keyOption, MenuKey menuKey, String optionText) {
             this.keyOption = keyOption;
