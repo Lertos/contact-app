@@ -54,9 +54,6 @@ public class Menu {
 
     public void switchState(MenuKey state) {
         switch (state) {
-            case MAIN_MENU:
-                menuMain();
-                break;
             case ADD_CONTACT:
                 menuAddContact();
                 break;
@@ -71,6 +68,9 @@ public class Menu {
                 break;
             case DELETE_LIST:
                 menuDeleteContacts();
+                break;
+            default:
+                menuMain();
                 break;
         }
     }
