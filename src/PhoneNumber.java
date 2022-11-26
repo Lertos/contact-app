@@ -40,6 +40,10 @@ public class PhoneNumber {
         return null;
     }
 
+    public String getPhoneNumber() {
+        return phoneNumber;
+    }
+
     @Override
     public String toString() {
         return phoneType.toString().toUpperCase() + ": " + phoneNumber;

@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="3bee9145-3d5d-4ca9-a7bf-c774dd3bfa4d" name="Changes" comment="Adding updateContactName test case">
+    <list default="true" id="3bee9145-3d5d-4ca9-a7bf-c774dd3bfa4d" name="Changes" comment="Adding updateCellNumber and updateHomeNumber test cases">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ContactListTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ContactListTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ContactList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ContactList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/PhoneNumber.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PhoneNumber.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,6 +51,18 @@
     <key name="CreateTestDialog.RecentsKey">
       <recent name="" />
     </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="ContactListTest" type="JUnit" factoryName="JUnit">
+      <module name="contact-app" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="ContactListTest" />
+      <option name="METHOD_NAME" value="" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -326,7 +339,14 @@
       <option name="project" value="LOCAL" />
       <updated>1669496442003</updated>
     </task>
-    <option name="localTasksCounter" value="39" />
+    <task id="LOCAL-00039" summary="Adding updateCellNumber and updateHomeNumber test cases">
+      <created>1669496779643</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1669496779643</updated>
+    </task>
+    <option name="localTasksCounter" value="40" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -341,7 +361,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Adding base states to the menu" />
     <MESSAGE value="Adding the menu start method, as well as the main menu" />
     <MESSAGE value="Scrapping old state idea. Using menu options instead" />
     <MESSAGE value="Setting up the main menu option list" />
@@ -366,6 +385,22 @@
     <MESSAGE value="Adding boolean return type to remove method" />
     <MESSAGE value="Adding removeContact test case" />
     <MESSAGE value="Adding updateContactName test case" />
-    <option name="LAST_COMMIT_MESSAGE" value="Adding updateContactName test case" />
+    <MESSAGE value="Adding updateCellNumber and updateHomeNumber test cases" />
+    <option name="LAST_COMMIT_MESSAGE" value="Adding updateCellNumber and updateHomeNumber test cases" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="java.lang.AssertionError" package="java.lang" />
+          <option name="timeStamp" value="1" />
+        </breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/ContactListTest.java</url>
+          <line>30</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

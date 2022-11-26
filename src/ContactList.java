@@ -155,7 +155,7 @@ public class ContactList {
 
     private boolean cellNumberExists(String cellNumber) {
         for (Contact contact : contactList) {
-            if (contact.getCellNumber().toString().equalsIgnoreCase(cellNumber))
+            if (contact.getCellNumber().getPhoneNumber().equalsIgnoreCase(cellNumber))
                 return true;
         }
         return false;
@@ -163,7 +163,7 @@ public class ContactList {
 
     private boolean homeNumberExists(String homeNumber) {
         for (Contact contact : contactList) {
-            if (contact.getHomeNumber().toString().equalsIgnoreCase(homeNumber))
+            if (contact.getHomeNumber().getPhoneNumber().equalsIgnoreCase(homeNumber))
                 return true;
         }
         return false;
