@@ -68,13 +68,14 @@ public class ContactList {
         return true;
     }
 
-    public void removeContact(int index) {
+    public boolean removeContact(int index) {
         if (contactList.size() < index || index < 0) {
             System.out.println("The id provided does not exist.");
-            return;
+            return false;
         }
 
         contactList.remove(index);
+        return true;
     }
 
     public boolean updateContactName(int index, String newName) {
