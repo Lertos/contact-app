@@ -54,6 +54,18 @@ public class ContactListTest {
 
     @Test
     public void updateContactName() {
+        //Testing changing to an existing name which is incorrect
+        assertTrue(contactList.addContact("Jack", "1-555-555-5556", "1-666-666-6667"));
+
+        assertFalse(contactList.updateContactName(0, "Jack"));
+
+        //Testing a correct change
+        assertTrue(contactList.updateContactName(0, "Sally"));
+
+        //Testing trying to change a name when the list is empty
+        contactList.emptyContactList();
+
+        assertFalse(contactList.updateContactName(0, "Jim"));
     }
 
     @Test
