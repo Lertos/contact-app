@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="3bee9145-3d5d-4ca9-a7bf-c774dd3bfa4d" name="Changes" comment="Cleaning up; small changes to make the code better" />
+    <list default="true" id="3bee9145-3d5d-4ca9-a7bf-c774dd3bfa4d" name="Changes" comment="Adding boolean return type to remove method">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ContactListTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ContactListTest.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -288,7 +291,28 @@
       <option name="project" value="LOCAL" />
       <updated>1669338411902</updated>
     </task>
-    <option name="localTasksCounter" value="34" />
+    <task id="LOCAL-00034" summary="Adding test cases to the ContactList class">
+      <created>1669495445491</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1669495445491</updated>
+    </task>
+    <task id="LOCAL-00035" summary="Adding the addContact test cases">
+      <created>1669495768089</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1669495768089</updated>
+    </task>
+    <task id="LOCAL-00036" summary="Adding boolean return type to remove method">
+      <created>1669495964190</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1669495964190</updated>
+    </task>
+    <option name="localTasksCounter" value="37" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -303,9 +327,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Changing how indexing will work for the contact list" />
-    <MESSAGE value="Fixing incorrect validation" />
-    <MESSAGE value="Adding another check for a negative index. Adding updateContactName" />
     <MESSAGE value="Adding methods to edit numbers for a contact" />
     <MESSAGE value="Adding a Menu class to hold the menu state" />
     <MESSAGE value="Adding base states to the menu" />
@@ -328,6 +349,9 @@
     <MESSAGE value="Fixing issue with case statement x2" />
     <MESSAGE value="Finishing the edit contact menu" />
     <MESSAGE value="Cleaning up; small changes to make the code better" />
-    <option name="LAST_COMMIT_MESSAGE" value="Cleaning up; small changes to make the code better" />
+    <MESSAGE value="Adding test cases to the ContactList class" />
+    <MESSAGE value="Adding the addContact test cases" />
+    <MESSAGE value="Adding boolean return type to remove method" />
+    <option name="LAST_COMMIT_MESSAGE" value="Adding boolean return type to remove method" />
   </component>
 </project>

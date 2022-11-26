@@ -11,17 +11,12 @@ public class ContactListTest {
     public void setup() {
          contactList = new ContactList();
          contactList.addContact("Dee", "1-555-555-5555", "1-666-666-6666");
-    }
 
-    @Test
-    public void size() {
         assertEquals(1, contactList.size());
     }
 
     @Test
     public void emptyContactList() {
-        assertEquals(1, contactList.size());
-
         contactList.emptyContactList();
 
         assertEquals(0, contactList.size());
@@ -29,8 +24,6 @@ public class ContactListTest {
 
     @Test
     public void addContact() {
-        assertEquals(1, contactList.size());
-
         //Testing duplicate names not being allowed
         assertFalse(contactList.addContact("Dee", "1-555-555-5556", "1-666-666-6667"));
 
@@ -44,11 +37,19 @@ public class ContactListTest {
         assertFalse(contactList.addContact("Russell", "56-565-56", "1-666-666-6667"));
 
         //Testing correct format
-        assertFalse(contactList.addContact("Bree", "1-444-444-4444", "1-777-777-7777"));
+        assertTrue(contactList.addContact("Bree", "1-444-444-4444", "1-777-777-7777"));
     }
 
     @Test
     public void removeContact() {
+        //Testing an incorrect index
+        assertFalse(contactList.removeContact(10));
+        assertFalse(contactList.removeContact(-1));
+
+        //Testing correct index
+        assertTrue(contactList.removeContact(0));
+
+        assertEquals(0, contactList.size());
     }
 
     @Test
