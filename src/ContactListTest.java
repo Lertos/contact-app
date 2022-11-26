@@ -70,9 +70,33 @@ public class ContactListTest {
 
     @Test
     public void updateCellNumber() {
+        //Testing changing to an existing cell number which is incorrect
+        assertTrue(contactList.addContact("Jack", "1-555-555-5556", "1-666-666-6667"));
+
+        assertFalse(contactList.updateCellNumber(0, "1-555-555-5556"));
+
+        //Testing a correct change
+        assertTrue(contactList.updateCellNumber(0, "1-444-444-4444"));
+
+        //Testing trying to change a cell number when the list is empty
+        contactList.emptyContactList();
+
+        assertFalse(contactList.updateCellNumber(0, "1-999-999-9999"));
     }
 
     @Test
     public void updateHomeNumber() {
+        //Testing changing to an existing home number which is incorrect
+        assertTrue(contactList.addContact("Jack", "1-555-555-5556", "1-666-666-6667"));
+
+        assertFalse(contactList.updateHomeNumber(0, "1-555-555-5556"));
+
+        //Testing a correct change
+        assertTrue(contactList.updateHomeNumber(0, "1-444-444-4444"));
+
+        //Testing trying to change a home number when the list is empty
+        contactList.emptyContactList();
+
+        assertFalse(contactList.updateHomeNumber(0, "1-999-999-9999"));
     }
 }
