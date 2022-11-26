@@ -89,7 +89,7 @@ public class ContactListTest {
         //Testing changing to an existing home number which is incorrect
         assertTrue(contactList.addContact("Jack", "1-555-555-5556", "1-666-666-6667"));
 
-        assertFalse(contactList.updateHomeNumber(0, "1-555-555-5556"));
+        assertFalse(contactList.updateHomeNumber(0, "1-666-666-6667"));
 
         //Testing a correct change
         assertTrue(contactList.updateHomeNumber(0, "1-444-444-4444"));

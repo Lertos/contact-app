@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="3bee9145-3d5d-4ca9-a7bf-c774dd3bfa4d" name="Changes" comment="Fixing a toString problem that always made the duplicate number checks fail">
+    <list default="true" id="3bee9145-3d5d-4ca9-a7bf-c774dd3bfa4d" name="Changes" comment="Fixing incorrect size check for an ArrayList">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ContactList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ContactList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ContactListTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ContactListTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -352,7 +352,14 @@
       <option name="project" value="LOCAL" />
       <updated>1669500750271</updated>
     </task>
-    <option name="localTasksCounter" value="41" />
+    <task id="LOCAL-00041" summary="Fixing incorrect size check for an ArrayList">
+      <created>1669500858410</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1669500858410</updated>
+    </task>
+    <option name="localTasksCounter" value="42" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -367,7 +374,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Scrapping old state idea. Using menu options instead" />
     <MESSAGE value="Setting up the main menu option list" />
     <MESSAGE value="Adding the rest of the menu option list setup" />
     <MESSAGE value="Adding method to get the menu key from the users response" />
@@ -392,7 +398,8 @@
     <MESSAGE value="Adding updateContactName test case" />
     <MESSAGE value="Adding updateCellNumber and updateHomeNumber test cases" />
     <MESSAGE value="Fixing a toString problem that always made the duplicate number checks fail" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixing a toString problem that always made the duplicate number checks fail" />
+    <MESSAGE value="Fixing incorrect size check for an ArrayList" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixing incorrect size check for an ArrayList" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
