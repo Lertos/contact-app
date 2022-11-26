@@ -79,7 +79,7 @@ public class ContactList {
     }
 
     public boolean updateContactName(int index, String newName) {
-        if (contactList.size() < index || index < 0) {
+        if (index >= contactList.size() || index < 0) {
             System.out.println("The id provided does not exist.");
             return false;
         }
@@ -94,7 +94,7 @@ public class ContactList {
     }
 
     public boolean updateCellNumber(int index, String newNumber) {
-        if (contactList.size() < index || index < 0) {
+        if (index >= contactList.size() || index < 0) {
             System.out.println("The id provided does not exist.");
             return false;
         }
@@ -120,7 +120,7 @@ public class ContactList {
     }
 
     public boolean updateHomeNumber(int index, String newNumber) {
-        if (contactList.size() < index || index < 0) {
+        if (index >= contactList.size() || index < 0) {
             System.out.println("The id provided does not exist.");
             return false;
         }
